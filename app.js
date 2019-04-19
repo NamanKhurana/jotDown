@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const exphbs  = require('express-handlebars');
+const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
 const flash = require('connect-flash');
 const session = require('express-session');
@@ -23,7 +23,7 @@ const db = require('./config/database');
 // Map global promise - get rid of warning
 mongoose.Promise = global.Promise;
 // Connect to mongoose
-mongoose.connect(db.mongoURI, {
+mongoose.connect(db.mongoURI, { useNewUrlParser: true }, {
   useMongoClient: true
 })
   .then(() => console.log('MongoDB Connected...'))
@@ -59,7 +59,7 @@ app.use(passport.session());
 app.use(flash());
 
 // Global variables
-app.use(function(req, res, next){
+app.use(function (req, res, next) {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
@@ -87,6 +87,6 @@ app.use('/users', users);
 
 const port = process.env.PORT || 5000;
 
-app.listen(port, () =>{
+app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
