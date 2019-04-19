@@ -1,6 +1,6 @@
 if(process.env.NODE_ENV === 'production')
 {
-    module.exports = {mongoURI: 'mongodb://Naman:Nk@vidjot-cluster-6cbrv.mongodb.net/test?retryWrites=true'}
+    module.exports = {mongoURI: 'mongodb+srv://Naman:Nk@vidjot-cluster-6cbrv.mongodb.net/test?retryWrites=true'}
 }
 else
 {
