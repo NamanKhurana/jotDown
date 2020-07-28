@@ -1,4 +1,4 @@
-# hotDOwn
+# jotDOwn
 CRUD APP USING NODEJS WITH LOGIN USING PASSPORT LOCAL
 
 YOU CAN CHECK THIS APPLICATION AT "https://stark-basin-34466.herokuapp.com/"
